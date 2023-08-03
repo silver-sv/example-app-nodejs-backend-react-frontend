@@ -10,12 +10,14 @@ const app = express();
 app.use("/static", express.static(STATIC_ASSETS_PATH));
 
 app.get("/", (request, response) => {
+	res.end(`Svitlana Silvestrova`);
 	response.send(`
 <!DOCTYPE html>
 <html>
 	<body>
 		<div id="container"></div>
 		<script src="/static/bundle.js"></script>
+		
 	</body>
 </html>
 	`);
